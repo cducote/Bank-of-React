@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './Components/Home';
 import UserProfile from './Components/UserProfile';
 import Login from './Components/Login'
+import Debits from './Components/Debits';
+import Credits from './Components/Credits';
 
 
 class App extends Component {
@@ -40,12 +42,22 @@ class App extends Component {
       <Login updateUser={this.updateUser}/>
     )
 
+    const DebitsComponent = () => (
+      <Debits />
+    )
+
+    const CreditsComponent = () => (
+      <Credits />
+    )
+
     return (
       <Router>
         <Switch>
           <Route exact path='/' render={HomeComponent}/>
           <Route exact path='/userProfile' render={UserProfileComponent}/>
           <Route exact path='/login' render={LoginComponent}/>
+          <Route exact path='/debits' render={DebitsComponent}/>
+          <Route exact path='/credits' render={CreditsComponent}/>
         </Switch>
       </Router>
     );
