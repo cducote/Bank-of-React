@@ -88,8 +88,6 @@ export default class Debits extends Component {
         <h2>Account Balance: {this.props.accountBalance}</h2>
         <div><h2>Total Debits: {totalDebits}</h2></div>
         <div>{debits}</div>
-        
-
       </div>
     )
   }

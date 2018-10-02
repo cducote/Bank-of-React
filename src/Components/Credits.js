@@ -70,6 +70,9 @@ export default class Credits extends Component {
 
   render() {
 
+    const totalCredits = this.state.credits.reduce((accumulator, credit) => {
+      return accumulator + credit.amount },0)
+
     const credits = this.state.credits.map(( credit ) => {
       return (
       <div>
@@ -84,6 +87,7 @@ export default class Credits extends Component {
     return (
       <div>
         <h2>Account Balance: {this.props.accountBalance}</h2>
+        <h2>Total Credit: {totalCredits}</h2>
         <div>{credits}</div>
       </div>
     )
