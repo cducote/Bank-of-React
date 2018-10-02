@@ -10,7 +10,7 @@ import Credits from './Components/Credits';
 class App extends Component {
 
   state = {
-    accountBalance: 999999,
+    accountBalance: 0,
     currentUser: {
       userName: 'Susan69',
       memberSince: '07/20/89'

@@ -70,6 +70,9 @@ export default class Debits extends Component {
 
   render() {
 
+    const totalDebits = this.state.debits.reduce((accumulator, debit) => { 
+      return accumulator + debit.amount },0)
+
     const debits = this.state.debits.map(( debit ) => {
       return (
         <div>
@@ -83,7 +86,9 @@ export default class Debits extends Component {
     return (
       <div>
         <h2>Account Balance: {this.props.accountBalance}</h2>
+        <div><h2>Total Debits: {totalDebits}</h2></div>
         <div>{debits}</div>
+        
 
       </div>
     )
