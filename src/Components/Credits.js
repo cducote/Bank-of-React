@@ -83,6 +83,7 @@ export default class Credits extends Component {
 
     return (
       <div>
+        <h2>Account Balance: {this.props.accountBalance}</h2>
         <div>{credits}</div>
       </div>
     )

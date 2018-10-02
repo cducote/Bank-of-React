@@ -43,11 +43,11 @@ class App extends Component {
     )
 
     const DebitsComponent = () => (
-      <Debits />
+      <Debits accountBalance={this.state.accountBalance}/>
     )
 
     const CreditsComponent = () => (
-      <Credits />
+      <Credits accountBalance={this.state.accountBalance}/>
     )
 
     return (
